@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Fitness theme colors
+				energy: 'hsl(var(--energy))',
+				power: 'hsl(var(--power))',
+				strength: 'hsl(var(--strength))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

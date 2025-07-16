@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cult Fitness Design System - Dark Premium Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark fitness theme */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Energetic orange primary */
+    --primary: 14 100% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Subtle dark secondary */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Red accent for energy */
+    --accent: 0 79% 63%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 14 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom fitness theme colors */
+    --energy: 14 100% 60%;
+    --energy-glow: 14 100% 70%;
+    --power: 0 79% 63%;
+    --strength: 45 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--power)));
+    --gradient-energy: linear-gradient(135deg, hsl(var(--energy)), hsl(var(--energy-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows with energy glow */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-energy: 0 10px 30px -10px hsl(var(--accent) / 0.4);
+    --shadow-card: 0 20px 40px -10px hsl(0 0% 0% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +122,79 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    background: var(--gradient-dark);
+  }
+}
+
+@layer components {
+  /* 3D Animation utilities */
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  .animate-rotate-slow {
+    animation: rotate 20s linear infinite;
+  }
+  
+  /* Fitness-specific components */
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .energy-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .card-lift {
+    transition: var(--transition-smooth);
+    transform: translateY(0);
+  }
+  
+  .card-lift:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Interactive elements */
+  .btn-energy {
+    background: var(--gradient-energy);
+    transition: var(--transition-bounce);
+    transform: scale(1);
+  }
+  
+  .btn-energy:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: var(--shadow-energy);
+  }
+  
+  .btn-energy:active {
+    transform: scale(0.98);
+  }
+}
+
+@layer utilities {
+  /* Custom keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotateY(0deg); }
+    50% { transform: translateY(-20px) rotateY(10deg); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.5); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.8); }
+  }
+  
+  @keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
   }
 }
