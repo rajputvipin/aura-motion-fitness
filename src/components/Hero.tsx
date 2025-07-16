@@ -2,6 +2,7 @@ import { ArrowRight, Play, Zap, Target, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-fitness.jpg";
+import dumbbellImage from "@/assets/dumbbell.png";
 
 const Hero = () => {
   return (
@@ -26,6 +27,15 @@ const Hero = () => {
         </div>
         <div className="absolute bottom-40 left-1/4 animate-float" style={{ animationDelay: "4s" }}>
           <div className="w-16 h-16 bg-strength/20 rounded-full blur-lg animate-pulse-glow" />
+        </div>
+        
+        {/* Dumbbell Image */}
+        <div className="absolute top-8 right-8 animate-float" style={{ animationDelay: "1s" }}>
+          <img 
+            src={dumbbellImage} 
+            alt="Dumbbell" 
+            className="w-16 h-16 md:w-20 md:h-20 opacity-70 hover:opacity-100 transition-opacity duration-300 transform-3d hover:scale-110"
+          />
         </div>
       </div>
 
