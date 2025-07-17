@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+# Aura Motion Fitness
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/0001fd2c-a9a1-4de7-af10-d0625dd6a189
+Aura Motion Fitness is a modern fitness web application designed to help users track their workouts, monitor progress, and stay motivated. The app provides an intuitive and responsive interface built with React and TypeScript, leveraging Vite for fast development and build times. Tailwind CSS is used for styling, and shadcn-ui components ensure accessibility and consistency. The backend is powered by Supabase for authentication and data management.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- User authentication and profile management
+- Workout tracking and history
+- Progress monitoring with charts and statistics
+- Responsive design for mobile and desktop
+- Integration with Supabase backend services
+- Accessible UI components with shadcn-ui
+- Fast development and build with Vite and TypeScript
 
-**Use Lovable**
+## Installation and Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0001fd2c-a9a1-4de7-af10-d0625dd6a189) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Steps to Run Locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd aura-motion-fitness
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open your browser and go to `http://localhost:3000` to view the application.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Usage
 
-**Use GitHub Codespaces**
+After running the development server, you can:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Sign up or log in to your account
+- Create and manage workout routines
+- View your workout history and progress charts
+- Customize your profile settings
 
-## What technologies are used for this project?
+## Development
 
-This project is built with:
+To contribute or develop further:
+
+- Follow the installation steps above
+- Use your preferred IDE for development
+- Run `npm run dev` to start the development server
+- Follow coding standards and commit message conventions
+
+## Technologies Used
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/0001fd2c-a9a1-4de7-af10-d0625dd6a189) and click on Share -> Publish.
+To deploy the project, use the Lovable platform:
 
-## Can I connect a custom domain to my Lovable project?
+- Open [Lovable](https://lovable.dev/projects/0001fd2c-a9a1-4de7-af10-d0625dd6a189)
+- Click on Share -> Publish
 
-Yes, you can!
+## Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can connect a custom domain:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Navigate to Project > Settings > Domains
+- Click Connect Domain
+
+More info: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Contact / Support
+
+For questions or support, contact the project maintainers or visit the [Lovable support page](https://lovable.dev/support).
