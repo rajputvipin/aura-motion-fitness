@@ -1,5 +1,7 @@
 # Aura Motion Fitness
 
+https://aura-motion-fitness.lovable.app
+
 ## Project Overview
 
 Aura Motion Fitness is a modern fitness web application designed to help users track their workouts, monitor progress, and stay motivated. The app provides an intuitive and responsive interface built with React and TypeScript, leveraging Vite for fast development and build times. Tailwind CSS is used for styling, and shadcn-ui components ensure accessibility and consistency. The backend is powered by Supabase for authentication and data management.
