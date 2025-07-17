@@ -54,7 +54,9 @@ const Dashboard = () => {
           navigate("/login");
         } else if (session) {
           setUser(session.user);
-          fetchUserData(session.user.id);
+          if (session.user) {
+            fetchUserData(session.user.id);
+          }
         }
       }
     );

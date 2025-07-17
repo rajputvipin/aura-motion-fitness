@@ -90,13 +90,22 @@ const Signup = () => {
       }
 
       if (data.user) {
-        toast({
-          title: "Success!",
-          description: "Account created successfully. Please check your email to confirm your account.",
-        });
-        
-        // Navigate to login page after successful signup
-        navigate("/login");
+        // Check if email confirmation is required
+        if (data.session) {
+          // User is automatically signed in (email confirmation disabled)
+          toast({
+            title: "Success!",
+            description: "Account created successfully. Welcome to Cult Fitness!",
+          });
+          navigate("/dashboard");
+        } else {
+          // Email confirmation required
+          toast({
+            title: "Success!",
+            description: "Account created successfully. Please check your email to confirm your account, then sign in.",
+          });
+          navigate("/login");
+        }
       }
     } catch (error) {
       toast({
